@@ -6,12 +6,7 @@
   padding-top:30px
 }
 button{
-  width: 100px;
-  height:40px;
   background: wheat;
   border-radius: 5px;
-  color: black;
-  font-weight:500;
-  text-transform: uppercase;
-  color:white;
+  color: #fdfdfd;
 }
