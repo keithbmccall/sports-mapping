@@ -1,10 +1,10 @@
 <main id="main">
   <app-panel-main></app-panel-main>
 </main>
-<aside id="left-panel">
+<aside id="left-panel" class="panel" [class.open]="panelDrawerService.drawerOpen === true">
   <app-panel-left></app-panel-left>
 </aside>
-<aside id="right-panel">
+<aside id="right-panel" class="panel" [class.open]="panelDrawerService.drawerOpen === true">
   <app-panel-right></app-panel-right>
 </aside>
 
