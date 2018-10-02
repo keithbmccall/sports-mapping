@@ -7,6 +7,9 @@ import { LayoutComponent } from './shared/containers/layout/layout.component';
 import { LeftPanelComponent } from './shared/containers/left-panel/left-panel.component';
 import { RightPanelComponent } from './shared/containers/right-panel/right-panel.component';
 import { CentralPanelComponent } from './shared/containers/central-panel/central-panel.component';
+import { PanelRightComponent } from './shared/containers/panel-right/panel-right.component';
+import { PanelLeftComponent } from './shared/containers/panel-left/panel-left.component';
+import { PanelMainComponent } from './shared/containers/panel-main/panel-main.component';
 
 
 @NgModule({
@@ -14,9 +17,10 @@ import { CentralPanelComponent } from './shared/containers/central-panel/central
     AppComponent,
     MapComponent,
     LayoutComponent,
-    LeftPanelComponent,
-    RightPanelComponent,
-    CentralPanelComponent
+    PanelRightComponent,
+    PanelLeftComponent,
+    PanelMainComponent
+
 
   ],
   imports: [
