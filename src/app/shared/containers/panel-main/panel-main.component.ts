@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.service';
 
 @Component({
   selector: 'app-panel-main',
@@ -8,7 +7,7 @@ import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.se
 })
 export class PanelMainComponent implements OnInit {
 
-  constructor(public panelDrawerService: PanelDrawerService) {
+  constructor() {
   }
 
   ngOnInit() {

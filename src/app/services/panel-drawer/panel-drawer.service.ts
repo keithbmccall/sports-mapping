@@ -4,10 +4,17 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class PanelDrawerService {
-  drawerOpen: boolean = false;
+  leftDrawerOpen: boolean = false;
+  rightDrawerOpen: boolean = false;
 
 
-  toggleDrawers(): void {
-    this.drawerOpen = !this.drawerOpen;
+  toggleDrawer(option: string): void {
+    if (option === 'right' || option === 'left') {
+      this[`${option}DrawerOpen`] = true;
+    } else if (option === 'close-right' || option === 'close-left'){
+
+    } else {
+      console.log(`error: ${option} is not a legit param`);
+    }
   }
 }
