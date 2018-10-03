@@ -1,25 +1,26 @@
 <div id="wrapper">
+  <div id="left-panel-options" class="panel-options">
+    <ul (click)="panelDrawerService.toggleDrawer('left')">
+      <li>
+        <a href="#">left</a>
+      </li>
+    </ul>
+  </div>
+  <div id="right-panel-options" class="panel-options">
+    <ul (click)="panelDrawerService.toggleDrawer('right')">
+      <li>
+        <a href="#">right</a>
+      </li>
+    </ul>
+  </div>
+  <!---->
   <main id="main">
     <app-panel-main></app-panel-main>
   </main>
   <aside id="left-panel" class="panel" [class.open]="panelDrawerService.leftDrawerOpen === true">
-    <div>
-      <ul href="#" (click)="panelDrawerService.toggleDrawer('left')">
-        <li>
-          <a>left</a>
-        </li>
-      </ul>
-      <app-panel-left></app-panel-left>
-    </div>
+    <app-panel-left></app-panel-left>
   </aside>
   <aside id="right-panel" class="panel" [class.open]="panelDrawerService.rightDrawerOpen === true">
-    <div>
-      <ul (click)="panelDrawerService.toggleDrawer('right')">
-        <li>
-          <a href="#">right</a>
-        </li>
-      </ul>
       <app-panel-right></app-panel-right>
-    </div>
   </aside>
 </div>
