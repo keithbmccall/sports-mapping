@@ -11,8 +11,8 @@ export class PanelDrawerService {
   toggleDrawer(option: string): void {
     if (option === 'right' || option === 'left') {
       this[`${option}DrawerOpen`] = true;
-    } else if (option === 'close-right' || option === 'close-left'){
-
+    } else if (option === 'close-right' || option === 'close-left') {
+      this[`${option.slice(6)}DrawerOpen`] = false;
     } else {
       console.log(`error: ${option} is not a legit param`);
     }

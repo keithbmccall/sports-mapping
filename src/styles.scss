@@ -22,9 +22,18 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+i{
+  a{
+    font-style: normal;
+  }
+}
 li {
   list-style-type: none;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
 }
 
 .button {
