@@ -2,7 +2,11 @@
   <i (click)="panelDrawerService.toggleDrawer('close-left')">
     <a href="#">x</a>
   </i>
-  <p>
-    panel-left works!
-  </p>
+  <nav>
+    <nav>
+      <li *ngFor="let division of conference.division.ts" >
+        {{division}}
+      </li>
+    </nav>
+  </nav>
 </div>

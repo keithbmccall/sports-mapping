@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.service';
 
 @Component({
@@ -7,8 +7,13 @@ import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.se
   styleUrls: ['./panel-left.component.scss']
 })
 export class PanelLeftComponent implements OnInit {
+  conference = {
+    title: '',
+    divisions: []
+  };
 
-  constructor(public panelDrawerService: PanelDrawerService) { }
+  constructor(public panelDrawerService: PanelDrawerService) {
+  }
 
   ngOnInit() {
   }
