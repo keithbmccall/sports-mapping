@@ -7,6 +7,7 @@ import {LayoutComponent} from './shared/containers/layout/layout.component';
 import {PanelRightComponent} from './shared/containers/panel-right/panel-right.component';
 import {PanelLeftComponent} from './shared/containers/panel-left/panel-left.component';
 import {PanelMainComponent} from './shared/containers/panel-main/panel-main.component';
+import { TeamsLinksComponent } from './shared/components/teams-links/teams-links.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {PanelMainComponent} from './shared/containers/panel-main/panel-main.comp
     LayoutComponent,
     PanelRightComponent,
     PanelLeftComponent,
-    PanelMainComponent
+    PanelMainComponent,
+    TeamsLinksComponent
   ],
   imports: [
     BrowserModule

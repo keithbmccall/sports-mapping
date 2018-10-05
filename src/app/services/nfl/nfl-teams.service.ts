@@ -1,4 +1,5 @@
 import { Injectable } from "@angular/core";
+import { Observable, of } from "rxjs";
 import { TEAMS, DIVISIONS, CONFERENCES } from "../../data/nfl-teams";
 import { Team, Division, Conference } from "../../data/team-data";
 
@@ -6,17 +7,15 @@ import { Team, Division, Conference } from "../../data/team-data";
   providedIn: "root"
 })
 export class NflTeamsService {
-  
-  getTeams(): Team[]{
-    return TEAMS
+  getTeams(): Observable<Team[]> {
+    return of(TEAMS);
   }
-  getDivisions(): Division[]{
-    return DIVISIONS
+  getDivisions(): Division[] {
+    return DIVISIONS;
   }
-  getConferences(): Conference[]{
-    return CONFERENCES
+  getConferences(): Conference[] {
+    return CONFERENCES;
   }
-
 
   constructor() {}
 }
