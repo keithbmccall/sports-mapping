@@ -22,4 +22,14 @@ export class TeamsLinksComponent implements OnInit {
   getTeams(): void {
     this.nflTeamsService.getTeams().subscribe(teams => (this.teams = teams));
   }
+  getDivisions(): void {
+    this.nflTeamsService
+      .getDivisions()
+      .subscribe(divisions => (this.divisions = divisions));
+  }
+  getConferences(): void {
+    this.nflTeamsService
+      .getConferences()
+      .subscribe(conferences => (this.conferences = conferences));
+  }
 }

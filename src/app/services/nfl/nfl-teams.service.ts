@@ -10,11 +10,11 @@ export class NflTeamsService {
   getTeams(): Observable<Team[]> {
     return of(TEAMS);
   }
-  getDivisions(): Division[] {
-    return DIVISIONS;
+  getDivisions(): Observable<Division[]> {
+    return of(DIVISIONS);
   }
-  getConferences(): Conference[] {
-    return CONFERENCES;
+  getConferences(): Observable<Conference[]> {
+    return of(CONFERENCES);
   }
 
   constructor() {}
