@@ -3,20 +3,24 @@ export class Team {
   name: string;
   city: string;
   stadium: string;
+  divisionId: number;
 }
 
 export class Division {
   id: number;
   name: string;
   teams: Team[];
+  conferenceId: number;
 }
 
 export class Conference {
   id: number;
   name: string;
-  divisions: Division{};
+  divisions: Division[];
+  logoUrl: string;
 }
 
+//
 // constructors
 function Club(id, city, name, stadium) {
   this.id = id;
@@ -31,10 +35,11 @@ function Div(id, name, teams) {
   this.teams = teams;
 }
 
-function Conf(id, name, divisions) {
+function Conf(id, name, divisions, logoUrl) {
   this.id = id;
   this.name = name;
   this.divisions = divisions;
+  this.logoUrl = logoUrl;
 }
 
 const patriots = new Club(1, "New England", "Patriots", "Gilette Stadium"),
@@ -52,7 +57,12 @@ const patriots = new Club(1, "New England", "Patriots", "Gilette Stadium"),
   chiefs = new Club(13, "Kansas City", "Chiefs", "Arrowhead Stadium"),
   raiders = new Club(14, "Oakland", "Raiders", "Oakland Alameda Coliseum"),
   chargers = new Club(15, "Los Angeles", "Chargers", "StubHub Center"),
-  broncos = new Club(16,"Denver","Broncos","Sports Authority Field at Mile High"),
+  broncos = new Club(
+    16,
+    "Denver",
+    "Broncos",
+    "Sports Authority Field at Mile High"
+  ),
   giants = new Club(17, "New York", "Giants", "MetLife Stadium"),
   cowboys = new Club(18, "Dallas", "Cowboys", "Cowboys Stadium"),
   redskins = new Club(19, "Washington", "Redskins", "FedEx Field"),
@@ -64,7 +74,12 @@ const patriots = new Club(1, "New England", "Patriots", "Gilette Stadium"),
   niners = new Club(25, "San Francisco", "49ers", "Levi's Stadium"),
   seahawks = new Club(26, "Seattle", "Seahawks", "CenturyLink Field"),
   rams = new Club(27, "Los Angeles", "Rams", "Los Angeles Memorial Coliseum"),
-  cardinals = new Club(28,"Arizona","Cardinals", "University of Phoenix Stadium"),
+  cardinals = new Club(
+    28,
+    "Arizona",
+    "Cardinals",
+    "University of Phoenix Stadium"
+  ),
   buccaneers = new Club(29, "Tampa Bay", "Buccaneers", "Raymond James Stadium"),
   falcons = new Club(30, "Atlanta", "Falcons", "Mercedes-Benz Stadium"),
   panthers = new Club(31, "Carolina", "Panthers", "Bank of America Stadium"),
@@ -79,14 +94,20 @@ const afcnorth = new Div(1, "AFC north", [steelers, browns, ravens, bengals]),
   nfcsouth = new Div(7, "NFC south", [buccaneers, saints, falcons, panthers]),
   nfcwest = new Div(8, "NFC west", [seahawks, cardinals, rams, niners]);
 
-const afc = new Conf(1, "AFC", [afcnorth, afceast, afcsouth, afcwest]),
-  nfc = new Conf(2, "NFC", [nfcnorth, nfceast, nfcsouth, nfcwest]);
+let nfcLogoUrl =
+    "https://en.wikipedia.org/wiki/National_Football_Conference#/media/File:National_Football_Conference_logo.svg",
+  afcLogoUrl =
+    "https://en.wikipedia.org/wiki/American_Football_Conference#/media/File:American_Football_Conference_logo.svg";
 
+const afc = new Conf(
+    1,
+    "AFC",
+    [afcnorth, afceast, afcsouth, afcwest],
+    afcLogoUrl
+  ),
+  nfc = new Conf(2, "NFC", [nfcnorth, nfceast, nfcsouth, nfcwest], nfcLogoUrl);
 
 export const league = {
   name: "NFL",
-  conferences: [
-    afc,
-    nfc
-  ]
+  conferences: [afc, nfc]
 };
