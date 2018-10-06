@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    justify-content: center;
+    padding-top:30px
+  }
+  .button{
+    background: #e07676;
+    border-radius: 5px;
+    color: #fdfdfd;
+    line-height: 40px;
+  }
+  .button:active{
+    background: #e07070;
+  }
+  .button span{
+    text-transform: uppercase;
+    font-size:11px;
+  }
+  

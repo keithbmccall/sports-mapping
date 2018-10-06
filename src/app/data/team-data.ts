@@ -94,11 +94,8 @@ const afcnorth = new Div(1, "AFC north", [steelers, browns, ravens, bengals]),
   nfcsouth = new Div(7, "NFC south", [buccaneers, saints, falcons, panthers]),
   nfcwest = new Div(8, "NFC west", [seahawks, cardinals, rams, niners]);
 
-let nfcLogoUrl =
-    "https://en.wikipedia.org/wiki/National_Football_Conference#/media/File:National_Football_Conference_logo.svg",
-  afcLogoUrl =
-    "https://en.wikipedia.org/wiki/American_Football_Conference#/media/File:American_Football_Conference_logo.svg";
-
+let nfcLogoUrl ="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/National_Football_Conference_logo.svg/300px-National_Football_Conference_logo.svg.png",
+  afcLogoUrl ="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/American_Football_Conference_logo.svg/300px-American_Football_Conference_logo.svg.png"
 const afc = new Conf(
     1,
     "AFC",

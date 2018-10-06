@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PanelRightComponent } from './panel-right.component';
+import { PanelCenterComponent } from './panel-center.component';
 
-describe('PanelRightComponent', () => {
-  let component: PanelRightComponent;
-  let fixture: ComponentFixture<PanelRightComponent>;
+describe('PanelCenterComponent', () => {
+  let component: PanelCenterComponent;
+  let fixture: ComponentFixture<PanelCenterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PanelRightComponent ]
+      declarations: [ PanelCenterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PanelRightComponent);
+    fixture = TestBed.createComponent(PanelCenterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

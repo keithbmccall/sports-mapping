@@ -1,0 +1,16 @@
+<aside id="{{panelSide}}-panel" class="panel" [class.open]="panelDrawerService[panelSide + 'DrawerOpen'] === true">
+
+  <div class="content">
+    <i (click)="this.panelDrawerServiceTogglePanel('close-')">
+      <a href="#">x</a>
+    </i>
+    <div class="header">
+      <div class="conference-logo">
+        <img src={{conference.logoUrl}} alt="" class="image">
+      </div>
+    </div>
+    <nav>
+      <app-division-links [conference]="conference" [divisions]="divisions"></app-division-links>
+    </nav>
+  </div>
+</aside>

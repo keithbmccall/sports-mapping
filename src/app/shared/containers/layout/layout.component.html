@@ -15,12 +15,11 @@
   </div>
   <!---->
   <main id="main">
-    <app-panel-main></app-panel-main>
+    <app-panel-center></app-panel-center>
   </main>
-  <aside id="left-panel" class="panel" [class.open]="panelDrawerService.leftDrawerOpen === true">
-    <app-panel-left></app-panel-left>
-  </aside>
-  <aside id="right-panel" class="panel" [class.open]="panelDrawerService.rightDrawerOpen === true">
-    <app-panel-right></app-panel-right>
-  </aside>
+  <!--  -->
+
+  <app-panel-side [conferenceId]=2 [panelSide]="'left'"></app-panel-side>
+
+  <app-panel-side [conferenceId]=2 [panelSide]="'right'"></app-panel-side>
 </div>

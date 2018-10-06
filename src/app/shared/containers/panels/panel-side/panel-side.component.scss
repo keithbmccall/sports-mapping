@@ -1,0 +1,43 @@
+.panel {
+  position: fixed;
+  height: 100vh;
+  width: 30%;
+  max-width: 350px;
+  background: #fafafa;
+  top: 0;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+  &#left-panel {
+    left: -350px;
+    border-right: 1px solid lightblue;
+    &.open {
+      left: 0;
+    }
+  }
+  &#right-panel {
+    right: -350px;
+    border-left: 1px solid lightblue;
+    &.open {
+      right: 0;
+    }
+  }
+  .content {
+    position: relative;
+    padding-right: 25px;
+    > i {
+      position: absolute;
+      right: 40px;
+    }
+    .header,
+    nav {
+      display: flex;
+      justify-content: center;
+    }
+    .header {
+      padding-top: 20px;
+      .conference-logo {
+        width: 30px;
+      }
+    }
+  }
+}

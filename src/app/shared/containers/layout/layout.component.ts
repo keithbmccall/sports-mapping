@@ -7,7 +7,6 @@ import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.se
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-
   constructor(public panelDrawerService: PanelDrawerService) { }
 
   ngOnInit() {
