@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sass": "sass --watch .:.",
-    "cmt": "git add .; git commit -m 'quick update'",
+    "commit": "git add .; git commit -m 'quick update'",
     "push": "git add .; git commit -m 'quick update';git push origin master"
   },
   "private": true,
