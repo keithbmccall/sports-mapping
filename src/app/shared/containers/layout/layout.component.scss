@@ -4,37 +4,4 @@
   #wrapper {
     position: relative;
   }
-  main {
-    background: #f0f0f0;
-    padding: 0 300px;
-    height: 100vh;
-  }
-
-  .panel-options {
-    position: absolute;
-    height: 100%;
-    z-index: 2;
-    background: grey;
-    > ul {
-      height: 100%;
-      width: 25px;
-      cursor: pointer;
-      padding-top: 10px;
-      > li {
-        color: white;
-      }
-    }
-    &#left-panel-options {
-      left: 0;
-      li {
-        transform: rotate(270deg);
-      }
-    }
-    &#right-panel-options {
-      right: 0;
-      li {
-        transform: rotate(90deg);
-      }
-    }
-  }
 }

@@ -1,25 +1,8 @@
 <div id="wrapper">
-  <div id="left-panel-options" class="panel-options">
-    <ul (click)="panelDrawerService.toggleDrawer('left')">
-      <li>
-        <a href="#">left</a>
-      </li>
-    </ul>
+  <div *ngFor="let conference of conferences">
+    <app-panel-options [conference]="conference" [panelSide]="conference.id === 1 ? 'left' : 'right'"></app-panel-options>
+    <app-panel-side [conference]="conference" [panelSide]="conference.id === 1 ? 'left' : 'right'"></app-panel-side>
   </div>
-  <div id="right-panel-options" class="panel-options">
-    <ul (click)="panelDrawerService.toggleDrawer('right')">
-      <li>
-        <a href="#">right</a>
-      </li>
-    </ul>
-  </div>
-  <!---->
-  <main id="main">
-    <app-panel-center></app-panel-center>
-  </main>
-  <!--  -->
+  <app-panel-center></app-panel-center>
 
-  <app-panel-side [conferenceId]=2 [panelSide]="'left'"></app-panel-side>
-
-  <app-panel-side [conferenceId]=2 [panelSide]="'right'"></app-panel-side>
 </div>

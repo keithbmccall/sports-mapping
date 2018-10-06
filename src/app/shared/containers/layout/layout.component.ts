@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {PanelDrawerService} from '../../../services/panel-drawer/panel-drawer.service';
-
+import { Component, OnInit } from "@angular/core";
+import { NflTeamsService } from "../../../services/nfl/nfl-teams.service";
+import { Conference } from "../../../data/team-data";
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  selector: "app-layout",
+  templateUrl: "./layout.component.html",
+  styleUrls: ["./layout.component.scss"]
 })
 export class LayoutComponent implements OnInit {
-  constructor(public panelDrawerService: PanelDrawerService) { }
+  conferences: Conference[];
+
+  constructor(public nflTeamsService: NflTeamsService) {}
 
   ngOnInit() {
+    this.getConferences();
   }
-
+  getConferences(): void {
+    this.nflTeamsService
+      .getConferences()
+      .subscribe(conference => (this.conferences = conference));
+  }
 }

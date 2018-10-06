@@ -9,6 +9,7 @@ import { DivisionLinksComponent } from './shared/components/team-links/division-
 import { ConferenceLinksComponent } from './shared/components/team-links/conference-links/conference-links.component';
 import { PanelSideComponent } from './shared/containers/panels/panel-side/panel-side.component';
 import { PanelCenterComponent } from './shared/containers/panels/panel-center/panel-center.component';
+import { PanelOptionsComponent } from './shared/containers/panels/panel-options/panel-options.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PanelCenterComponent } from './shared/containers/panels/panel-center/pa
     DivisionLinksComponent,
     ConferenceLinksComponent,
     PanelSideComponent,
-    PanelCenterComponent
+    PanelCenterComponent,
+    PanelOptionsComponent
   ],
   imports: [BrowserModule],
   providers: [],

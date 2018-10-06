@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { PanelDrawerService } from "../../../../services/panel-drawer/panel-drawer.service";
 import { NflTeamsService } from "../../../../services/nfl/nfl-teams.service";
-import { Division } from "../../../../data/team-data";
+import { Division, Conference } from "../../../../data/team-data";
 
 @Component({
   selector: "app-panel-side",
@@ -10,12 +10,11 @@ import { Division } from "../../../../data/team-data";
 })
 export class PanelSideComponent implements OnInit {
   @Input()
-  conferenceId: number;
+  conference: Conference;
   @Input()
   panelSide: string;
 
   //
-  conference: any;
   divisions: Division[];
 
   constructor(
@@ -24,23 +23,12 @@ export class PanelSideComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getDivisions(this.conferenceId);
-    this.getConference(this.conferenceId);
+    this.getDivisions(this.conference.id);
   }
   panelDrawerServiceTogglePanel(instruction): void {
     this.panelDrawerService.toggleDrawer(instruction + this.panelSide);
   }
 
-  getConference(conferenceId): void {
-    this.nflTeamsService
-      .getConferences()
-      .subscribe(
-        conference =>
-          (this.conference = conference.filter(
-            conf => conf.id === conferenceId
-          )[0])
-      );
-  }
   getDivisions(conferenceId): void {
     this.nflTeamsService
       .getDivisions()
