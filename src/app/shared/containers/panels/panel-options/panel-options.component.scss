@@ -1,3 +1,5 @@
+$ulPadding: 20px;
+
 .panel-options {
   position: absolute;
   height: 100%;
@@ -7,17 +9,21 @@
     height: 100%;
     width: 25px;
     cursor: pointer;
-    padding-top: 10px;
+    padding-top: $ulPadding;
     > li {
       color: white;
-      h4{
+      h4 {
         font-size: 1.3em;
+        letter-spacing: 1px;
       }
     }
   }
   &#left-panel-options {
     padding-top: 5px;
     left: 0;
+    > ul {
+      padding-top: $ulPadding + 3px;
+    }
     li {
       transform: rotate(270deg);
     }
