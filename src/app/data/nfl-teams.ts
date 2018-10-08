@@ -1,6 +1,6 @@
 import { Team, Division, Conference, league } from "./team-data";
 
-let allDivisions = [],
+const allDivisions = [],
   allTeams = league.conferences.reduce((a, c) => {
     allDivisions.push(...c.divisions);
     c.divisions.forEach(divi => {
@@ -10,7 +10,13 @@ let allDivisions = [],
     });
     return a;
   }, []);
+//
+const CONFERENCES: Conference[] = league.conferences,
+  DIVISIONS: Division[] = allDivisions,
+  TEAMS: Team[] = allTeams;
 
-export const CONFERENCES: Conference[] = league.conferences;
-export const DIVISIONS: Division[] = allDivisions;
-export const TEAMS: Team[] = allTeams;
+export const NFL = {
+  CONFERENCES,
+  DIVISIONS,
+  TEAMS
+};

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { PanelDrawerService } from "../../../../services/panel-drawer/panel-drawer.service";
-import { NflTeamsService } from "../../../../services/nfl/nfl-teams.service";
+import { TeamsDataService } from "../../../../services/teams-data/teams-data.service";
 import { Division, Conference } from "../../../../data/team-data";
 
 @Component({
@@ -19,7 +19,7 @@ export class PanelSideComponent implements OnInit {
 
   constructor(
     public panelDrawerService: PanelDrawerService,
-    public nflTeamsService: NflTeamsService
+    public teamsDataService: TeamsDataService
   ) {}
 
   ngOnInit() {
@@ -30,7 +30,7 @@ export class PanelSideComponent implements OnInit {
   }
 
   getDivisions(conferenceId): void {
-    this.nflTeamsService
+    this.teamsDataService
       .getDivisions()
       .subscribe(
         divisions =>
