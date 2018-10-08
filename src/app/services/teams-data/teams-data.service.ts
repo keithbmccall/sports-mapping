@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { League } from "../../data/teams-reducer";
+import { League } from "../../data/teams-reducer.js";
 import { Team, Division, Conference } from "../../data/team-data";
 
 @Injectable({

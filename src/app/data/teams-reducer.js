@@ -1,20 +1,7 @@
-import { Team, Division, Conference } from "./team-data";
 import { NFL as nfl } from "./nfl-teams";
 
-const NFL = {
-    CONFERENCES: [],
-    DIVISIONS: [],
-    TEAMS: []
-  },
-  NBA = {
-    CONFERENCES: [],
-    DIVISIONS: [],
-    TEAMS: []
-  };
-export const League = {
-  NFL,
-  NBA
-};
+export const League = {};
+// 
 function createLeague(league) {
   let leagueObj = {
     ID: 0,
