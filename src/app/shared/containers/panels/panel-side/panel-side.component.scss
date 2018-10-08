@@ -1,4 +1,4 @@
-$panel-width: 350px;
+@import "../../../../../styles/variables";
 
 .panel {
   position: fixed;
@@ -32,6 +32,10 @@ $panel-width: 350px;
     > i {
       position: absolute;
       right: 25px;
+      top: 0;
+      a {
+        font-size: 2em;
+      }
     }
     .header,
     nav {
@@ -40,12 +44,11 @@ $panel-width: 350px;
     }
     nav {
       margin-top: 55px;
-      
     }
     .header {
       padding-top: 20px;
-      .conference-logo {
-        width: 30px;
+      .image-holder-40 {
+        width: 40px;
       }
     }
   }
