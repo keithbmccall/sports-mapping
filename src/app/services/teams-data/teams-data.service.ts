@@ -7,16 +7,16 @@ import { Team, Division, Conference } from "../../data/team-data";
   providedIn: "root"
 })
 export class TeamsDataService {
-  league: number = 1;
+  leagueId: number = 1;
 
   getTeams(): Observable<Team[]> {
-    return this.league === 1 && of(League.NFL.TEAMS);
+    return this.leagueId === 1 && of(League.NFL.TEAMS);
   }
   getDivisions(): Observable<Division[]> {
-    return this.league === 1 && of(League.NFL.DIVISIONS);
+    return this.leagueId === 1 && of(League.NFL.DIVISIONS);
   }
   getConferences(): Observable<Conference[]> {
-    return this.league === 1 && of(League.NFL.CONFERENCES);
+    return this.leagueId === 1 && of(League.NFL.CONFERENCES);
   }
 
   constructor() {}
