@@ -1,0 +1,12 @@
+:host {
+    li {
+      margin-top: 10px;
+      h2{
+        font-weight: 600; 
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  

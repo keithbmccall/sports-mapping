@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DivisionLinksComponent } from './division-links.component';
+import { ListLinksComponent } from './list-links.component';
 
-describe('DivisionLinksComponent', () => {
-  let component: DivisionLinksComponent;
-  let fixture: ComponentFixture<DivisionLinksComponent>;
+describe('ListLinksComponent', () => {
+  let component: ListLinksComponent;
+  let fixture: ComponentFixture<ListLinksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DivisionLinksComponent ]
+      declarations: [ ListLinksComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DivisionLinksComponent);
+    fixture = TestBed.createComponent(ListLinksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
