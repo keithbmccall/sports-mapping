@@ -42,67 +42,69 @@ function Conf(id, name, divisions, logoUrl) {
   this.logoUrl = logoUrl;
 }
 
-const patriots = new Club(1, "New England", "Patriots", "Gilette Stadium"),
-  dolphins = new Club(2, "Miami", "Dolphins", "Hard Rock Stadium"),
-  jets = new Club(3, "New York", "Jets", "MetLife Stadium"),
-  bills = new Club(4, "Buffalo", "Bills", "New Era Field"),
-  steelers = new Club(5, "Pittsburgh", "Steelers", "Heinz Field"),
-  browns = new Club(6, "Cleveland", "Browns", "FirstEnergy Stadium"),
-  bengals = new Club(7, "Cincinatti", "Bengals", "Paul Brown Stadium"),
-  ravens = new Club(8, "Baltimore", "Ravens", "M&T Bank Stadium"),
-  jaguars = new Club(9, "Jacksonville", "Jaguars", "EverBank Field"),
-  titans = new Club(10, "Tennessee", "Titans", "Nissan Stadium"),
-  colts = new Club(11, "Indianapolis", "Colts", "Lucas Oil Stadium"),
-  texans = new Club(12, "Houston", "Texans", "NRG Stadium"),
-  chiefs = new Club(13, "Kansas City", "Chiefs", "Arrowhead Stadium"),
-  raiders = new Club(14, "Oakland", "Raiders", "Oakland Alameda Coliseum"),
-  chargers = new Club(15, "Los Angeles", "Chargers", "StubHub Center"),
+const patriots = new Club(16, "New England", "Patriots", "Gilette Stadium"),
+  dolphins = new Club(23, "Miami", "Dolphins", "Hard Rock Stadium"),
+  jets = new Club(17, "New York", "Jets", "MetLife Stadium"),
+  bills = new Club(13, "Buffalo", "Bills", "New Era Field"),
+  steelers = new Club(8, "Pittsburgh", "Steelers", "Heinz Field"),
+  browns = new Club(31, "Cleveland", "Browns", "FirstEnergy Stadium"),
+  bengals = new Club(26, "Cincinatti", "Bengals", "Paul Brown Stadium"),
+  ravens = new Club(11, "Baltimore", "Ravens", "M&T Bank Stadium"),
+  jaguars = new Club(29, "Jacksonville", "Jaguars", "EverBank Field"),
+  titans = new Club(20, "Tennessee", "Titans", "Nissan Stadium"),
+  colts = new Club(12, "Indianapolis", "Colts", "Lucas Oil Stadium"),
+  texans = new Club(32, "Houston", "Texans", "NRG Stadium"),
+  chiefs = new Club(15, "Kansas City", "Chiefs", "Arrowhead Stadium"),
+  raiders = new Club(18, "Oakland", "Raiders", "Oakland Alameda Coliseum"),
+  chargers = new Club(19, "Los Angeles", "Chargers", "StubHub Center"),
   broncos = new Club(
-    16,
+    14,
     "Denver",
     "Broncos",
     "Sports Authority Field at Mile High"
   ),
-  giants = new Club(17, "New York", "Giants", "MetLife Stadium"),
-  cowboys = new Club(18, "Dallas", "Cowboys", "Cowboys Stadium"),
-  redskins = new Club(19, "Washington", "Redskins", "FedEx Field"),
-  eagles = new Club(20, "Philadelphia", "Eagles", "Lincoln Financial Field"),
-  packers = new Club(21, "Green Bay", "Packers", "Lambeau Field"),
-  bears = new Club(22, "Chicago", "Bears", "Soldier Field"),
-  vikings = new Club(23, "Minnesota", "Vikings", "U.S. Bank Stadium"),
-  lions = new Club(24, "Detroit", "Lions", "Ford Field"),
-  niners = new Club(25, "San Francisco", "49ers", "Levi's Stadium"),
-  seahawks = new Club(26, "Seattle", "Seahawks", "CenturyLink Field"),
-  rams = new Club(27, "Los Angeles", "Rams", "Los Angeles Memorial Coliseum"),
+  giants = new Club(2, "New York", "Giants", "MetLife Stadium"),
+  cowboys = new Club(21, "Dallas", "Cowboys", "Cowboys Stadium"),
+  redskins = new Club(6, "Washington", "Redskins", "FedEx Field"),
+  eagles = new Club(7, "Philadelphia", "Eagles", "Lincoln Financial Field"),
+  packers = new Club(4, "Green Bay", "Packers", "Lambeau Field"),
+  bears = new Club(1, "Chicago", "Bears", "Soldier Field"),
+  vikings = new Club(22, "Minnesota", "Vikings", "U.S. Bank Stadium"),
+  lions = new Club(5, "Detroit", "Lions", "Ford Field"),
+  niners = new Club(10, "San Francisco", "49ers", "Levi's Stadium"),
+  seahawks = new Club(27, "Seattle", "Seahawks", "CenturyLink Field"),
+  rams = new Club(9, "Los Angeles", "Rams", "Los Angeles Memorial Coliseum"),
   cardinals = new Club(
-    28,
+    3,
     "Arizona",
     "Cardinals",
     "University of Phoenix Stadium"
   ),
-  buccaneers = new Club(29, "Tampa Bay", "Buccaneers", "Raymond James Stadium"),
-  falcons = new Club(30, "Atlanta", "Falcons", "Mercedes-Benz Stadium"),
-  panthers = new Club(31, "Carolina", "Panthers", "Bank of America Stadium"),
-  saints = new Club(32, "New Orleans", "Saints", "Mercedes-Benz Superdome");
+  buccaneers = new Club(28, "Tampa Bay", "Buccaneers", "Raymond James Stadium"),
+  falcons = new Club(24, "Atlanta", "Falcons", "Mercedes-Benz Stadium"),
+  panthers = new Club(30, "Carolina", "Panthers", "Bank of America Stadium"),
+  saints = new Club(25, "New Orleans", "Saints", "Mercedes-Benz Superdome");
 
-const afcnorth = new Div(1, "AFC north", [steelers, browns, ravens, bengals]),
-  afceast = new Div(2, "AFC east", [patriots, jets, dolphins, bills]),
-  afcsouth = new Div(3, "AFC south", [colts, texans, jaguars, titans]),
-  afcwest = new Div(4, "AFC west", [chiefs, raiders, broncos, chargers]),
-  nfcnorth = new Div(5, "NFC north", [packers, bears, vikings, lions]),
-  nfceast = new Div(6, "NFC east", [giants, cowboys, eagles, redskins]),
-  nfcsouth = new Div(7, "NFC south", [buccaneers, saints, falcons, panthers]),
-  nfcwest = new Div(8, "NFC west", [seahawks, cardinals, rams, niners]);
+const afcnorth = new Div(8, "AFC north", [steelers, browns, ravens, bengals]),
+  afceast = new Div(7, "AFC east", [patriots, jets, dolphins, bills]),
+  afcsouth = new Div(6, "AFC south", [colts, texans, jaguars, titans]),
+  afcwest = new Div(5, "AFC west", [chiefs, raiders, broncos, chargers]),
+  nfcnorth = new Div(1, "NFC north", [packers, bears, vikings, lions]),
+  nfceast = new Div(2, "NFC east", [giants, cowboys, eagles, redskins]),
+  nfcsouth = new Div(3, "NFC south", [buccaneers, saints, falcons, panthers]),
+  nfcwest = new Div(4, "NFC west", [seahawks, cardinals, rams, niners]);
 
-let nfcLogoUrl ="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/National_Football_Conference_logo.svg/300px-National_Football_Conference_logo.svg.png",
-  afcLogoUrl ="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/American_Football_Conference_logo.svg/300px-American_Football_Conference_logo.svg.png"
+let nfcLogoUrl =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/National_Football_Conference_logo.svg/300px-National_Football_Conference_logo.svg.png",
+  afcLogoUrl =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/American_Football_Conference_logo.svg/300px-American_Football_Conference_logo.svg.png";
 const afc = new Conf(
-    1,
+    2,
     "AFC",
     [afcnorth, afceast, afcsouth, afcwest],
     afcLogoUrl
   ),
-  nfc = new Conf(2, "NFC", [nfcnorth, nfceast, nfcsouth, nfcwest], nfcLogoUrl);
+  nfc = new Conf(1, "NFC", [nfcnorth, nfceast, nfcsouth, nfcwest], nfcLogoUrl);
 
 export const league = {
   name: "NFL",
