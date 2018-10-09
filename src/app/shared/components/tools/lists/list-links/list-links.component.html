@@ -1,6 +1,5 @@
 <li *ngFor="let listItem of listItems">
-  <a href="/divisions/{{listItem.name | removeWhiteSpace | lowercase}}" class="listItem-title link">
-
+  <a href="{{linkRoute}}divisions/{{listItem.name | removeWhiteSpace | lowercase}}" class="list-link">
 
     <h2>{{listItem.name | uppercase}}</h2>
   </a>

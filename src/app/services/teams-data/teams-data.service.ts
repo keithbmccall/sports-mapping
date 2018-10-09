@@ -8,6 +8,7 @@ import { Team, Division, Conference } from "../../data/team-data";
 })
 export class TeamsDataService {
   leagueId: number = 1;
+  leagueRoute: string = this.leagueId === 1 && League.NFL.ROUTE;
 
   getTeams(): Observable<Team[]> {
     return this.leagueId === 1 && of(League.NFL.TEAMS);

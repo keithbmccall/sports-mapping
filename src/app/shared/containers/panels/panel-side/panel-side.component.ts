@@ -16,6 +16,7 @@ export class PanelSideComponent implements OnInit {
 
   //
   divisions: Division[];
+  leagueRoute: string;
 
   constructor(
     public panelDrawerService: PanelDrawerService,
@@ -23,13 +24,14 @@ export class PanelSideComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getDivisions(this.conference.id);
+    this.fetchData(this.conference.id);
   }
   panelDrawerServiceTogglePanel(instruction): void {
     this.panelDrawerService.toggleDrawer(instruction + this.panelSide);
   }
 
-  getDivisions(conferenceId): void {
+  fetchData(conferenceId): void {
+    this.leagueRoute = this.teamsDataService.leagueRoute;
     this.teamsDataService
       .getDivisions()
       .subscribe(

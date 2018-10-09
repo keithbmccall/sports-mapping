@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from "@angular/core";
 export class ListLinksComponent implements OnInit {
   @Input()
   listItems;
+  @Input()
+  linkRoute;
+  //
   constructor() {}
 
   ngOnInit() {}
