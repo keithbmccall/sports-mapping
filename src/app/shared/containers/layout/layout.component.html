@@ -1,8 +1,10 @@
 <div id="wrapper">
   <div *ngFor="let conference of conferences">
-    <app-panel-options [conference]="conference" [panelSide]="conference.id === 1 ? 'left' : 'right'"></app-panel-options>
+    <app-panel-options [conference]="conference"
+                       [panelSide]="conference.id === 1 ? 'left' : 'right'"></app-panel-options>
     <app-panel-side [conference]="conference" [panelSide]="conference.id === 1 ? 'left' : 'right'"></app-panel-side>
   </div>
   <app-panel-center></app-panel-center>
 
 </div>
+<!--list link hieght on app panel-->

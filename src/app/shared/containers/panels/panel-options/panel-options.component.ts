@@ -1,10 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { PanelDrawerService } from "../../../../services/panel-drawer/panel-drawer.service";
+import {Component, OnInit, Input} from '@angular/core';
+import {PanelDrawerService} from '../../../../services/panel-drawer/panel-drawer.service';
 
 @Component({
-  selector: "app-panel-options",
-  templateUrl: "./panel-options.component.html",
-  styleUrls: ["./panel-options.component.scss"]
+  selector: 'app-panel-options',
+  templateUrl: './panel-options.component.html',
+  styleUrls: ['./panel-options.component.scss']
 })
 export class PanelOptionsComponent implements OnInit {
   @Input()
@@ -13,7 +13,9 @@ export class PanelOptionsComponent implements OnInit {
   panelSide: string;
 
 
-  constructor(public panelDrawerService: PanelDrawerService) {}
+  constructor(public panelDrawerService: PanelDrawerService) {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

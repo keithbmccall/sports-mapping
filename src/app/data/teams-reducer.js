@@ -1,17 +1,21 @@
 import { NFL as nfl } from "./nfl-teams";
+import { NBA as nba } from './nba-teams'
 
 export const League = {};
+
 //
-function createLeague(league) {
+export const createLeague = function (league) {
   let leagueObj = {
     ID: 0,
     ROUTE: "",
+    NAME: "",
     CONFERENCES: [],
     DIVISIONS: [],
     TEAMS: []
   };
   //
   leagueObj.ID = league.id;
+  leagueObj.NAME = league.name;
   leagueObj.ROUTE = `${league.name.toLowerCase()}/`;
   leagueObj.CONFERENCES = league.conferences;
   leagueObj.TEAMS = league.conferences.reduce((a, c) => {
@@ -24,8 +28,8 @@ function createLeague(league) {
     return a;
   }, []);
   //
-
-  //
   League[league.name] = leagueObj;
-}
+};
+
 createLeague(nfl);
+createLeague(nba);
